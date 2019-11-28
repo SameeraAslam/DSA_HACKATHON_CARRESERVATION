@@ -1,0 +1,111 @@
+package project;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author 18sw05
+ */
+public class Car {
+           Car(){
+            Scanner scan= new Scanner(System.in);
+            System.out.println("Enter Model Year");
+            int year = scan.nextInt();
+           
+            Driver d = new Driver();
+        }//constructor
+    }
+    
+
+package project;
+
+import java.util.Scanner;
+
+public class Driver {
+     Driver(){
+         
+         Scanner scan= new Scanner(System.in);
+            System.out.println("Enter 1 for Male Driver \nEnter 2 for Female Driver");
+            int gender = scan.nextInt();
+            switch(gender){
+                case 1: 
+                    String mname = "Bashir";
+                    int mage = 25;
+                    double mphone = 2589643;
+                    long mcnic = 413036964;
+                    System.out.println("Name : " + mname + "\nPhone  : " + mphone + "\nCNIC : " + mcnic);
+                    break;
+                case 2: 
+                    String fname = "Bashira";
+                    int fage = 30;
+                    double fphone = 2578943;
+                    long fcnic = 413089964;
+                    System.out.println("Name : " + fname + "\nPhone  : " + fphone + "\nCNIC : " + fcnic);
+           break;
+            }//switch
+          Location l = new Location();  
+        }//driver
+}
+package project;
+
+import java.util.Scanner;
+public class Location {
+    Location(){
+            Scanner scan= new Scanner(System.in);
+            String[] city = {"Karachi","Sehwan","Dadu"};
+           
+            System.out.println("Enter your choice of city");
+             System.out.println("Karachi Sehwan Dadu");
+            String select=scan.nextLine();
+             
+            switch(select){
+                case "Karachi":
+                    System.out.println("PAYMENT FROM HYD TO KHI: 4,000");
+                    payment();
+                    break;
+                case "Hyderabd":
+                    System.out.println("PAYMENT FROM HYD TO DADU: 4,000");
+                    payment();  
+                    break;
+                case "Sehwan":
+                    System.out.println("PAYMENT FROM HYD TO SEHWAN: 4,000");
+                    payment();   
+                    break;
+                 }//switch
+        }//location constructor
+        public void payment(){
+            System.out.println("PAYMENT WITHIN CITY ACC TO PER KM");
+            int x=0;
+                    for(int i=1; i<=5; i++)
+                      x = 5000*i;
+                    System.out.println("Your Amount Is : " + x);
+                }//payment
+}
+package project;
+import java.util.Scanner;
+import java.util.*;
+
+public class PROJECT {
+  
+  
+    public static void main(String[] args) {
+               String[]cars={"Corolla","Vitz","Civic"};
+           
+               Scanner scan =  new Scanner(System.in);
+        System.out.println("Corolla Vitz Civic");
+       System.out.println("Enter your Car :");
+            String c = scan.nextLine();
+           if(c.equals("Corolla")){
+              Car cr= new Car();
+           }
+           else if(c.equals("Vitz")){
+              Car cr= new Car();
+           }
+           else if (c.equals("Civic")){
+              Car cr= new Car();
+           }
+           else 
+               System.out.println("Car not available");
+    }
+    }
+    
